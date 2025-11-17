@@ -2,8 +2,6 @@
 
 A Client Side Vite Template.
 
-!["web_ui"](./assets/images/web_ui.png)
-
 ---
 
 ##  🚀 PlayGround
