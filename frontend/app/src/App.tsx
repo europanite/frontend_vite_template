@@ -1,9 +1,6 @@
-import React, {
-  FC,
-} from "react";
+import type { FC } from "react";
 
 const App: FC = () => {
-
   return (
     <div className="app-root">
 
