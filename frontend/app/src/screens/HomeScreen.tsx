@@ -1,27 +1,28 @@
-import { ScrollView, View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 
 const HomeScreen = () => {
   return (
-    <ScrollView style={styles.scroll} contentContainerStyle={styles.container}>
+    <View style={styles.root}>
       <View style={styles.main}>
-        <Text>Description</Text>
+        <Text style={styles.text}>This is a template of the frontend vite proejct.</Text>
       </View>
-    </ScrollView>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  scroll: {
+  root: {
     flex: 1
   },
-  container: {
-    flex: 1,
-    paddingHorizontal: 16,
-    paddingVertical: 24,
-    alignItems: "stretch"
-  },
   main: {
-    padding: 10
+    flex: 1,
+    padding: 16,
+    backgroundColor: "#cfcfcf;",
+    borderRadius: 0
+  },
+  text: {
+    color: "#050505ff",
+    fontSize: 14
   }
 });
 
