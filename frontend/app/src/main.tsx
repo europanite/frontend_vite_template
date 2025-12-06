@@ -1,17 +1,19 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./style.css";
+import { AppRegistry } from "react-native";
 import App from "./App";
 
-let rootElement = document.getElementById("app");
-if (!rootElement) {
-  rootElement = document.createElement("div");
-  rootElement.id = "app";
-  document.body.appendChild(rootElement);
-}
+const appName = "FrontendViteTemplate";
 
-ReactDOM.createRoot(rootElement).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+AppRegistry.registerComponent(appName, () => App);
+
+const rootTag =
+  document.getElementById("root") ??
+  (() => {
+    const root = document.createElement("div");
+    root.id = "root";
+    document.body.appendChild(root);
+    return root;
+  })();
+
+AppRegistry.runApplication(appName, {
+  rootTag
+});
