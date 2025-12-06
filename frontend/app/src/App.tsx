@@ -1,16 +1,13 @@
-import React from "react";
-import {
-  SafeAreaView,
-  StyleSheet,
-} from "react-native";
+import type { FC } from "react";
+import { SafeAreaView, StyleSheet } from "react-native";
 import { AuthProvider } from "./context/Auth";
 import SettingsBar from "./components/SettingsBar";
 import HomeScreen from "./screens/HomeScreen";
 
-const App: React.FC = () => {
+const App: FC = () => {
   return (
-    <AuthProvider style={styles.root}>
-      <SafeAreaView >
+    <AuthProvider>
+      <SafeAreaView style={styles.root}>
         <SettingsBar />
         <HomeScreen />
       </SafeAreaView>
@@ -18,11 +15,7 @@ const App: React.FC = () => {
   );
 };
 
-type Styles = {
-  root: ViewStyle;
-};
-
-const styles = StyleSheet.create<Styles>({
+const styles = StyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: "#a8a8a8b0"

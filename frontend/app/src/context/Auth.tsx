@@ -1,16 +1,11 @@
-import React, {
-  createContext,
-  useContext,
-  useState,
-  type ReactNode
-} from "react";
+import { createContext, useContext, useState, type ReactNode } from "react";
 
 type User = { email: string } | null;
 
 type AuthContextValue = {
   user: User;
   token: string | null;
-  authHeader: () => Record<string, string>;
+  authHeader: () => Partial<Record<string, string>>;
   login: (email: string, token: string) => void;
   logout: () => void;
 };
@@ -27,7 +22,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User>(null);
   const [token, setToken] = useState<string | null>(null);
 
-  const authHeader = () => (token ? { Authorization: `Bearer ${token}` } : {});
+  const authHeader = (): Partial<Record<string, string>> =>
+    token ? { Authorization: `Bearer ${token}` } : {};
 
   const login = (email: string, tokenValue: string) => {
     setUser({ email });

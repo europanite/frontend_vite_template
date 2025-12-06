@@ -1,17 +1,8 @@
-import React from "react";
-import {
-  ScrollView,
-  View,
-  Text,
-  StyleSheet,
-} from "react-native";
+import { ScrollView, View, Text, StyleSheet } from "react-native";
 
-const HomeScreen: React.FC = () => {
-
+const HomeScreen = () => {
   return (
-    <ScrollView
-      style={styles.scroll}
-    >
+    <ScrollView style={styles.scroll} contentContainerStyle={styles.container}>
       <View style={styles.main}>
         <Text>Description</Text>
       </View>
@@ -19,25 +10,19 @@ const HomeScreen: React.FC = () => {
   );
 };
 
-type Styles = {
-  scroll: ViewStyle;
-  container: ViewStyle;
-  main: ViewStyle;
-};
-
-const styles = StyleSheet.create<Styles>({
+const styles = StyleSheet.create({
   scroll: {
-    flex: 1,
-  },
-  main: {
-    padding:10,
+    flex: 1
   },
   container: {
-    flex:1,
+    flex: 1,
     paddingHorizontal: 16,
     paddingVertical: 24,
-    alignItems: "stretch",
-  } as any,
+    alignItems: "stretch"
+  },
+  main: {
+    padding: 10
+  }
 });
 
 export default HomeScreen;

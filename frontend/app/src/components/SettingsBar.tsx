@@ -1,14 +1,7 @@
-import React from "react";
-import {
-  View,
-  Text,
-  Pressable,
-  StyleSheet,
-  Linking
-} from "react-native";
+import { View, Text, Pressable, StyleSheet, Linking } from "react-native";
 import { REPO_URL } from "../screens/HomeScreenUtil";
 
-const SettingsBar: React.FC = () => {
+const SettingsBar = () => {
   const openUrl = (url: string) => {
     Linking.openURL(url).catch((err) => {
       console.error("Failed to open URL:", err);
@@ -18,33 +11,15 @@ const SettingsBar: React.FC = () => {
   return (
     <View style={styles.container}>
       <View style={styles.inner}>
-        <Pressable 
-          onPress={() => openUrl(REPO_URL)}
-        >
-          <Text style={styles.logoText}>
-            Frontend Vite Template
-          </Text>
+        <Pressable onPress={() => openUrl(REPO_URL)}>
+          <Text style={styles.logoText}>Frontend Vite Template</Text>
         </Pressable>
       </View>
     </View>
   );
 };
 
-type Styles = {
-  container: ViewStyle;
-  inner: ViewStyle;
-  logoRow: ViewStyle;
-  logoText: TextStyle;
-  tagText: TextStyle;
-  navRow: ViewStyle;
-  navButton: ViewStyle;
-  primaryButton: ViewStyle;
-  ghostButton: ViewStyle;
-  primaryButtonText: TextStyle;
-  ghostButtonText: TextStyle;
-};
-
-const styles = StyleSheet.create<Styles>({
+const styles = StyleSheet.create({
   container: {
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderBottomColor: "rgba(148,163,184,0.4)",
