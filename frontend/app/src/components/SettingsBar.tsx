@@ -44,44 +44,10 @@ const styles = StyleSheet.create({
     letterSpacing: 0.8,
     textTransform: "uppercase"
   },
-  tagText: {
-    fontSize: 11,
-    color: "#a5b4fc",
-    paddingHorizontal: 6,
-    paddingVertical: 2,
-    borderRadius: 999,
-    borderWidth: StyleSheet.hairlineWidth,
-    borderColor: "rgba(129,140,248,0.7)",
-    backgroundColor: "rgba(79,70,229,0.15)"
-  },
   navRow: {
     flexDirection: "row",
     alignItems: "center"
   },
-  navButton: {
-    paddingHorizontal: 10,
-    paddingVertical: 6,
-    borderRadius: 999,
-    marginLeft: 8,
-    borderWidth: StyleSheet.hairlineWidth
-  },
-  primaryButton: {
-    backgroundColor: "#4f46e5",
-    borderColor: "rgba(129,140,248,0.9)"
-  },
-  ghostButton: {
-    borderColor: "rgba(148,163,184,0.7)",
-    backgroundColor: "transparent"
-  },
-  primaryButtonText: {
-    fontSize: 12,
-    color: "#f9fafb",
-    fontWeight: "600"
-  },
-  ghostButtonText: {
-    fontSize: 12,
-    color: "#9ca3af"
-  }
 });
 
 export default SettingsBar;
