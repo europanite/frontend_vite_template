@@ -4,9 +4,11 @@
 [![docker](https://github.com/europanite/frontend_vite_template/actions/workflows/docker.yml/badge.svg)](https://github.com/europanite/frontend_vite_template/actions/workflows/docker.yml)
 [![pages](https://github.com/europanite/frontend_vite_template/actions/workflows/pages.yml/badge.svg)](https://github.com/europanite/frontend_vite_template/actions/workflows/pages.yml)
 
- [PlayGround](https://europanite.github.io/frontend_vite_template/)
+!["web_ui"](./assets/images/web_ui.png)
 
 A Client Side Vite Template.
+
+[PlayGround](https://europanite.github.io/frontend_vite_template/)
 
 ---
 
