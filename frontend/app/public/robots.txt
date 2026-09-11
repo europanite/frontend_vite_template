@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://europanite.github.io/frontend_vite_template/sitemap.xml
